@@ -2,7 +2,12 @@
 font-family: 'Slackey', cursive;;
 }
 
-
+/*dark orange #DB3B2A*/
+/*tan #EDD9B9*/
+/*red #DB3B2A*/
+/*brown #704323*/
+/*green #AFD7C4*/
+/*orange #E07B3F*/
 
 .mainBox {
 	display: flex;
@@ -61,6 +66,9 @@ font-family: 'Slackey', cursive;;
 
 .leftbottombox {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 /*	border: solid orange 1px;*/
 	height: 458px;
 	width: 458px;
@@ -104,8 +112,8 @@ h1 {
 
 .searchbox{
 	display: flex;
-	background-color:#D77F65;
- 	padding:13px;
+	background-color:#EDD9B9;
+ 	padding:8px;
  	width:458px;
  	margin-left: 135px;
  	margin-top: 3px;
@@ -131,7 +139,7 @@ input[type="text"]{
 	 0 1px 1px 0 #fff,
 	 0 2px 2px 1px #fafafa,
 	 0 2px 4px 0 #b2b2b2 inset,
-	 0 -1px 1px 0 #f2f2f2 inset,
+	 0 -1px 1px 0 #DB3B2A inset,
 	 0 15px 15px 0 rgba(41, 41, 41, 0.09) inset;
 }
 
@@ -270,6 +278,20 @@ hr {
 	width: 720px;
 	overflow: scroll;
 }
+
+/*===========artist-box 2=======================*/
+
+.artist-box2 {
+	display: flex;
+	border: solid red 1px;
+	height: 286px;
+	width: 177px;
+	margin-top: 20px;
+}
+
+
+
+
 
 /*// .play img {
 //   position : relative;

@@ -21,9 +21,12 @@ function getTracks (query) {
 	console.log(response); 
 
 	var resultsHTML = response.map(addMusicToPage);
-	$(".search-results").html(resultsHTML)
-	$(".songtitle").on("click", returnsongs)
-
+		$(".search-results").html(resultsHTML)
+		$(".songtitle").on("click", returnsongs)
+		// $(".artisttitle").on("click", returnsongs)
+		// $(".artworkbox").on("click", returnsongs)
+	// var resultsHTML2 = response.map(addMusicToPage2);
+		// $(".songtitle").on("click", addMusicToPage2)
 });
 
 
@@ -36,8 +39,9 @@ $("button").on("click", function(event) {
 
 		var resultsHTML = response.map(addMusicToPage);
 		$(".search-results").html(resultsHTML)
-		$(".songtitle").on("click", returnsongs)
-		// $('.search-results').replaceAll(html);
+		 $(".songtitle").on("click", returnsongs)
+		 // $(".artisttitle").on("click", returnsongs)
+		 // $(".artworkbox").on("click", returnsongs)
 		})
 })
 
@@ -49,6 +53,8 @@ var song =  `    <audio class="audioplayer" controls="controls">
 				 </audio>`;
 $(".audioplayerbox").html(song);
 
+var newartisthtml = addMusicToPage2
+    $(".nowplaying").html(newartisthtml);
 }
 
 
@@ -84,7 +90,35 @@ function addMusicToPage (data){
  };
 
 
+function addMusicToPage2 (data){
+  if (data.artwork_url === null){
+    data.artwork_url = './images/smiley-face2.png'
+  };
+	var html = `
 
+	<div class="artist-box">
+
+		<div class="artistinfobox">
+			<div class="artworkbox">
+			 <img src="${data.artwork_url}" style="width: 100%;max-height: 100%">
+		</div>
+
+		<div class="songartistbox">
+			<div class="songtitle" data-stream_url=${data.stream_url} >
+			  <span data-stream_url=${data.stream_url}>${data.title}</span>
+			</div>
+		  <hr>
+
+				<div class="artisttitle">
+				  <span>${data.user.username}</span>
+				</div>
+			</div>
+
+		</div>
+
+	</div> `
+    // $(".nowplaying").html(html);
+ };
 
 
 
