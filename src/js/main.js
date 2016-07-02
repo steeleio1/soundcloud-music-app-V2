@@ -76,7 +76,7 @@ function addMusicToPage (data){
 			<div class="songtitle" data-stream_url=${data.stream_url} >
 			  <span data-stream_url=${data.stream_url}>${data.title}</span>
 			</div>
-		  <hr>
+		  <hr class="hr1">
 
 				<div class="artisttitle">
 				  <span>${data.user.username}</span>
@@ -96,20 +96,20 @@ function addMusicToPage2 (data){
   };
 	var html = `
 
-	<div class="artist-box">
+	<div class="artist-box2">
 
-		<div class="artistinfobox">
-			<div class="artworkbox">
+		<div class="artistinfobox2">
+			<div class="artworkbox2">
 			 <img src="${data.artwork_url}" style="width: 100%;max-height: 100%">
 		</div>
 
-		<div class="songartistbox">
-			<div class="songtitle" data-stream_url=${data.stream_url} >
+		<div class="songartistbox2">
+			<div class="songtitle2" data-stream_url=${data.stream_url} >
 			  <span data-stream_url=${data.stream_url}>${data.title}</span>
 			</div>
-		  <hr>
+      	<hr class="hr2">
 
-				<div class="artisttitle">
+				<div class="artisttitle2">
 				  <span>${data.user.username}</span>
 				</div>
 			</div>
