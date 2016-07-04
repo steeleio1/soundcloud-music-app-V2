@@ -25,8 +25,9 @@ function getTracks (query) {
 		$(".songtitle").on("click", returnsongs)
 		// $(".artisttitle").on("click", returnsongs)
 		// $(".artworkbox").on("click", returnsongs)
-	// var resultsHTML2 = response.map(addMusicToPage2);
-		// $(".songtitle").on("click", addMusicToPage2)
+	var resultsHTML2 = response.filter(addMusicToPage2);
+		$(".nowplayingbox").append(resultsHTML2)
+		$(".songtitle").on("click", returnsongs)
 });
 
 
@@ -53,8 +54,8 @@ var song =  `    <audio class="audioplayer" controls="controls">
 				 </audio>`;
 $(".audioplayerbox").html(song);
 
-var newartisthtml = addMusicToPage2
-    $(".nowplaying").html(newartisthtml);
+// var newartisthtml = addMusicToPage2
+//     $(".nowplaying").html(newartisthtml);
 }
 
 
@@ -96,27 +97,26 @@ function addMusicToPage2 (data){
   };
 	var html = `
 
-	<div class="artist-box2">
+      <div class="artist-box2">
 
-		<div class="artistinfobox2">
-			<div class="artworkbox2">
-			 <img src="${data.artwork_url}" style="width: 100%;max-height: 100%">
-		</div>
+        <div class="artistinfobox2">
+          <div class="artworkbox2">
+           <img src="./images/smiley-face2.png" style="width: 100%;max-height: 100%">
+          </div>
 
-		<div class="songartistbox2">
-			<div class="songtitle2" data-stream_url=${data.stream_url} >
-			  <span data-stream_url=${data.stream_url}>${data.title}</span>
-			</div>
-      	<hr class="hr2">
+           <div class="songartistbox2">
+             <div class="songtitle2" data-stream_url=${data.stream_url} >
+               <span data-stream_url=${data.stream_url}>${data.title}</span>
+             </div>
+             <hr class="hr2">
+              <div class="artisttitle2">
+                <span>${data.user.username}</span>
+              </div>
+           </div>
+        </div>
+      </div>  `
 
-				<div class="artisttitle2">
-				  <span>${data.user.username}</span>
-				</div>
-			</div>
-
-		</div>
-
-	</div> `
+    return html;
     // $(".nowplaying").html(html);
  };
 

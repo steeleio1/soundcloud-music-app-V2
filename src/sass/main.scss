@@ -1,7 +1,9 @@
-* {
+/** {
 font-family: 'Slackey', cursive;;
-}
+}*/
 
+*{font-family: 'Walter Turncoat', cursive;
+}
 /*dark orange #DB3B2A*/
 /*tan #EDD9B9*/
 /*red #DB3B2A*/
@@ -23,6 +25,8 @@ font-family: 'Slackey', cursive;;
 	margin-top: 20px;
 	flex: 1;
 	background: #F3F0E1;
+/*	background-size: cover;
+	background: url(/images/paper.png) no-repeat center center fixed; */
 }
 /*===========main boxes=====*/
 .leftBox {
@@ -63,6 +67,7 @@ font-family: 'Slackey', cursive;;
 /*	border: solid orange 1px;*/
 	height: 253px;
 	width: 279px;
+	font-weight: bolder;
 }
 
 .leftbottombox {
@@ -159,20 +164,11 @@ button[type="submit"]{
 	 cursor:pointer;
 }
 
-/*// button:hover {
-// 	box-shadow: 15px 15px 15px #DB3B2A;
-// 	transform: scale(1.05);
-// 		transition:all 0.5s linear;
-// }*/
-
-
-
 
 /*/=========audioplayer===============*/
 .audioplayerbox {
 	display: flex;
 	flex-direction: column;
-/*	border-top: solid #DB3B2A 1px;*/
 /*	border: solid red 1px;*/
 	justify-content: center;
 	align-items: center;
@@ -283,23 +279,36 @@ hr.hr1{
 
 /*===========Now Playing=======================*/
 
-.nowplaying {
+.nowplayingbox {
 	display: flex;
-	flex-direction: column;
-	border: solid red 1px;
+	flex-direction: row;
+/*	border: solid red 1px;*/
 	height: 286px;
 	width: 177px;
 	margin-top: 50px;
-/*	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
 				0 6px 20px 0 #E07B3F;
-*/
+
+}
+
+.nowplayingtext {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+/*	border: solid orange 3px;*/
+	text-align: vertical;
+	height: 280px;
+	width: 20px;
+	font-size: 15px;
+	color: #E07B3F;
 }
 
 .artist-box2{
 /*	border: solid red 1px;*/
 	display: flex;
 	flex-direction: column;
-	width: 176px;
+	width: 156px;
 	height: 285px;
 	background: #704323;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
@@ -310,16 +319,16 @@ hr.hr1{
 .artistinfobox2 {
 	display: flex;
 	flex-direction: column;
-	border: solid orange 1px;
+/*	border: solid orange 1px;*/
 	height: 285px;
-	width: 176px;
+	width: 156px;
 }
 
 .artworkbox2 {
 	display: flex;
-	border: solid yellow 1px;
-	width: 175px;
-	height: 175px;
+/*	border: solid yellow 1px;
+*/	width: 156px;
+	height: 156px;
 
 
 }
@@ -327,9 +336,9 @@ hr.hr1{
 
 .songtitle2 {
 	display: flex;
-	border: solid green 1px;
-	height: 70px;
-	width: 174px;
+/*	border: solid green 1px;
+*/	height: 70px;
+	width: 154px;
 	margin-top: 10px;
 	align-items: center;
 /*	padding-left: 5px;*/
@@ -349,9 +358,9 @@ hr.hr2{
 
 .artisttitle2 {
 	display: flex;
-	border: solid blue 1px;
-	height: 50px;
-	width: 174px;
+/*	border: solid blue 1px;
+*/	height: 50px;
+	width: 154px;
 	align-content: center;
 	align-items: center;
 /*	padding-left: 5px;*/
@@ -361,13 +370,3 @@ hr.hr2{
 }
 
 
-
-
-/*// .play img {
-//   position : relative;
-//   width : 50px;
-//   height : 50px;
-//   z-index : 100;
-//   margin : 0 0 50px 125px;
-//   opacity : 0.0 ;
-// } */
